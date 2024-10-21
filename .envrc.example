@@ -1,0 +1,4 @@
+export COGNITO_CLIENT_ID=<your_client_id>
+export COGNITO_CLIENT_SECRET=<your_client_secret>
+export COGNITO_DOMAIN=<domain_from_app_integration_page>
+export REDIRECT_URL=https://localhost:5173/auth/callback

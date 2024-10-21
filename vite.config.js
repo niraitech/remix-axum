@@ -6,6 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": "http://localhost:4444",
+      "/auth": "http://localhost:4444",
     },
   },
 });
