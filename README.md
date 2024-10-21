@@ -11,8 +11,9 @@ BFF and the backend layers.
 * [x] Setup loader and client loader to skip the hop
 * [x] Setup authentication with cognito
 * [x] Setup cookie that can be read by both remix and axum
+* [x] Perform token verification via cookie on the axum server
+* [ ] Perform token verification via header on axum
 * [ ] Perform token verification both on remix server 
-* [ ] Perform token verification via both cookie and header on axum
 * [ ] Setup refresh token workflow from cognito
 * [ ] Add logout endpoint to clear cookie
 * [ ] Logout should also revoke refresh token
