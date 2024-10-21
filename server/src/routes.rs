@@ -1,12 +1,9 @@
 use axum::{debug_handler, response::IntoResponse, routing::get, Router, extract::Json};
+use common_types::Message;
 mod auth_routes;
 mod user_routes;
 mod middleware;
 
-#[derive(serde::Serialize, Debug)]
-struct Message {
-    message: String,
-}
 
 #[debug_handler]
 async fn index_route() -> impl IntoResponse {

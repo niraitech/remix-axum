@@ -1,17 +1,13 @@
-[package]
-name = "remix-axum"
+[workspace]
+members=["common-types", "server"]
+resolver="2"
+
+[workspace.package]
 version = "0.1.0"
 edition = "2021"
 
-[dependencies]
-async-trait = "0.1.83"
-axum = {version="0.7.7", features=["macros"]}
-axum-extra = {version="0.9.4", features=["cookie"]}
-jsonwebtoken = "9.3.0"
-reqwest = {version="0.12.8", features=["json"]}
+
+[workspace.dependencies]
+schemars = "0.8.21"
 serde = {version="1.0.210", features=["derive"]}
 serde_json = "1.0.132"
-thiserror = "1.0.64"
-tokio = { version = "1.40.0", features = ["full"] }
-tracing = "0.1.40"
-tracing-subscriber = "0.3.18"
