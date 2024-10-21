@@ -17,6 +17,15 @@ where
     type Rejection = (StatusCode, String);
     async fn from_request_parts(parts: &mut Parts, s: &S) -> Result<Self, Self::Rejection> {
         let auth = AuthState::from_ref(s);
+        if let Some(val) = parts.headers.get("Authorization") {
+            if let Ok(token) = val.to_str() {
+                let claims = auth.decode(token)
+                    .map_err(|e| (StatusCode::UNAUTHORIZED, e.to_string()))?;
+                return Ok(Self { claims });
+            } else {
+                tracing::warn!("Unable to parse Authorization header");
+            }
+        }
         let jar =  CookieJar::from_headers(&parts.headers);
         if let Some(token) = jar.get("auth_token") {
             let claims = auth.decode(token.value())

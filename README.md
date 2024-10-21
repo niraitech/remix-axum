@@ -12,7 +12,7 @@ BFF and the backend layers.
 * [x] Setup authentication with cognito
 * [x] Setup cookie that can be read by both remix and axum
 * [x] Perform token verification via cookie on the axum server
-* [ ] Perform token verification via header on axum
+* [x] Perform token verification via header on axum
 * [ ] Perform token verification both on remix server 
 * [ ] Setup refresh token workflow from cognito
 * [ ] Add logout endpoint to clear cookie
