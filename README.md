@@ -1,9 +1,10 @@
 # Axum and Remix example
 
-A proof-of-concept repo  to integrate remix frontend with an axum backend. 
+A boilerplate repo to integrate remix frontend with an axum backend. 
 The goal is to limit Javascript and React's to the frontend and the BFF 
 layer alone while being able to share the authentication securely between the
-BFF and the backend layers.
+BFF and the backend layers. It uses cognito for auth that Nirai uses. Adapting
+it to other OIDC providers should be fairly staight forward.
 
 * [x] Setup remix project with tailwind
 * [x] Setup axum project
@@ -13,7 +14,6 @@ BFF and the backend layers.
 * [x] Setup cookie that can be read by both remix and axum
 * [x] Perform token verification via cookie on the axum server
 * [x] Perform token verification via header on axum
-* [ ] Perform token verification both on remix server 
 * [ ] Setup refresh token workflow from cognito
 * [ ] Add logout endpoint to clear cookie
 * [ ] Logout should also revoke refresh token
