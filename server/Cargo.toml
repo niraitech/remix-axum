@@ -17,3 +17,8 @@ thiserror = "1.0.64"
 tokio = { version = "1.40.0", features = ["full"] }
 tracing = "0.1.40"
 tracing-subscriber = "0.3.18"
+
+[build-dependencies]
+common-types = { path = "../common-types" }
+schemars = {workspace=true}
+schemars-zod = "0.1.5"

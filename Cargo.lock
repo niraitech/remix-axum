@@ -191,6 +191,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "chrono"
+version = "0.4.38"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a21f936df1771bf62b77f047b726c4625ff2e8aa607c01ec06e5a05bd8463401"
+dependencies = [
+ "num-traits",
+]
+
+[[package]]
 name = "common-types"
 version = "0.1.0"
 dependencies = [
@@ -998,9 +1007,20 @@ version = "0.8.21"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "09c024468a378b7e36765cd36702b7a90cc3cba11654f6685c8f233408e89e92"
 dependencies = [
+ "chrono",
  "dyn-clone",
  "schemars_derive",
  "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "schemars-zod"
+version = "0.1.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1d93f9994db2562b356d3dffeaddd26e54ae9a05bad8590aa4179ec8a2b700ae"
+dependencies = [
+ "schemars",
  "serde_json",
 ]
 
@@ -1121,6 +1141,7 @@ dependencies = [
  "jsonwebtoken",
  "reqwest",
  "schemars",
+ "schemars-zod",
  "serde",
  "serde_json",
  "thiserror",
