@@ -17,3 +17,29 @@ BFF and the backend layers.
 * [ ] Setup refresh token workflow from cognito
 * [ ] Add logout endpoint to clear cookie
 * [ ] Logout should also revoke refresh token
+
+## :hammer: Configuration
+
+To setup you need to following env vars. Look at `.envrc.example` for more details
+
+```
+export COGNITO_CLIENT_ID=<your_client_id>
+export COGNITO_CLIENT_SECRET=<your_client_secret>
+export COGNITO_DOMAIN=<domain_from_app_integration_page>
+export COGNITO_ISSUER_URL=https://cognito-idp.<region>.amazonaws.com/us-east-1_<user_pool_id>
+export REDIRECT_URL=https://localhost:5173/auth/callback
+```
+
+
+## :rocket: Running
+
+
+To run this locally. You need to run the rust server and then the remix app.
+
+```
+$ cargo run
+```
+
+```
+$ pnpm run dev
+```
