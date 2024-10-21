@@ -17,6 +17,7 @@ BFF and the backend layers.
 * [ ] Setup refresh token workflow from cognito
 * [ ] Add logout endpoint to clear cookie
 * [ ] Logout should also revoke refresh token
+* [x] Add a way to automatically generate typescript types from Rust
 
 ## :hammer: Configuration
 
@@ -32,7 +33,6 @@ export REDIRECT_URL=https://localhost:5173/auth/callback
 
 
 ## :rocket: Running
-
 
 To run this locally. You need to run the rust server and then the remix app.
 
